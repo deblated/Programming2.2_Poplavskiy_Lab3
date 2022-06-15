@@ -6,7 +6,7 @@
 #include "Timer.h"
 int main(){
 	srand(time(0));
-	unsigned int size = 128413;
+	unsigned int size = 149741;
 	Str* arr1 = new Str[size];
 	ArrGen(arr1, size);
 	Str* arr2 = new Str[size];
