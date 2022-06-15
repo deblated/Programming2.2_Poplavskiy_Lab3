@@ -18,7 +18,9 @@ public:
 
 	void SetValueRand();
 
-	std::string GetValue();
+	std::string GetStr();
+
+	int GetLength();
 
 	Str& operator=(const Str& other);
 };
@@ -55,8 +57,12 @@ void Str::SetValueRand() {
 	this->SetValue(StrGen(rand() % 10 + 1));
 }
 
-std::string Str::GetValue() {
+std::string Str::GetStr() {
 	return this->str;
+}
+
+int Str::GetLength() {
+	return this->length;
 }
 
 Str& Str::operator=(const Str& other) {
@@ -64,3 +70,4 @@ Str& Str::operator=(const Str& other) {
 	this->length = other.length;
 	return *this;
 }
+
