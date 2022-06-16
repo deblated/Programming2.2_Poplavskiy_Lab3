@@ -1,0 +1,91 @@
+\hypertarget{class_merge_sort_mult}{}\doxysection{Merge\+Sort\+Mult Class Reference}
+\label{class_merge_sort_mult}\index{MergeSortMult@{MergeSortMult}}
+
+
+Class for merge sorting, using multi-\/threading.  
+
+
+
+
+{\ttfamily \#include $<$Merge\+Sort.\+h$>$}
+
+Inheritance diagram for Merge\+Sort\+Mult\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_merge_sort_mult}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_merge_sort_mult_a9880b5c60f9fe8439fc973ee575e5a85}{Merge\+Sort\+Mult}} ()
+\item 
+\mbox{\hyperlink{class_merge_sort_mult_a494c22f4424085a2e1be1d23907161ed}{Merge\+Sort\+Mult}} (\mbox{\hyperlink{class_str}{Str}} $\ast$\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, int \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}})
+\item 
+\mbox{\hyperlink{class_merge_sort_mult_aa373d74cebe8cb8d275a23c5761f89c0}{Merge\+Sort\+Mult}} (const \mbox{\hyperlink{class_merge_sort_mult}{Merge\+Sort\+Mult}} \&obj)
+\item 
+void \mbox{\hyperlink{class_merge_sort_mult_a5ea54a3fa790e46c67df7cfcc82dfa8a}{Sort}} ()
+\begin{DoxyCompactList}\small\item\em Sorts an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{Merge\+Sort\+Multi}} (int th)
+\begin{DoxyCompactList}\small\item\em Divides an array to the 4 parts (because we use 4 threads) and sorts them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for merge sorting, using multi-\/threading. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_merge_sort_mult_a9880b5c60f9fe8439fc973ee575e5a85}\label{class_merge_sort_mult_a9880b5c60f9fe8439fc973ee575e5a85}} 
+\index{MergeSortMult@{MergeSortMult}!MergeSortMult@{MergeSortMult}}
+\index{MergeSortMult@{MergeSortMult}!MergeSortMult@{MergeSortMult}}
+\doxysubsubsection{\texorpdfstring{MergeSortMult()}{MergeSortMult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Merge\+Sort\+Mult\+::\+Merge\+Sort\+Mult (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_merge_sort_mult_a494c22f4424085a2e1be1d23907161ed}\label{class_merge_sort_mult_a494c22f4424085a2e1be1d23907161ed}} 
+\index{MergeSortMult@{MergeSortMult}!MergeSortMult@{MergeSortMult}}
+\index{MergeSortMult@{MergeSortMult}!MergeSortMult@{MergeSortMult}}
+\doxysubsubsection{\texorpdfstring{MergeSortMult()}{MergeSortMult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Merge\+Sort\+Mult\+::\+Merge\+Sort\+Mult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_merge_sort_mult_aa373d74cebe8cb8d275a23c5761f89c0}\label{class_merge_sort_mult_aa373d74cebe8cb8d275a23c5761f89c0}} 
+\index{MergeSortMult@{MergeSortMult}!MergeSortMult@{MergeSortMult}}
+\index{MergeSortMult@{MergeSortMult}!MergeSortMult@{MergeSortMult}}
+\doxysubsubsection{\texorpdfstring{MergeSortMult()}{MergeSortMult()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Merge\+Sort\+Mult\+::\+Merge\+Sort\+Mult (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_merge_sort_mult}{Merge\+Sort\+Mult}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}\label{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}} 
+\index{MergeSortMult@{MergeSortMult}!MergeSortMulti@{MergeSortMulti}}
+\index{MergeSortMulti@{MergeSortMulti}!MergeSortMult@{MergeSortMult}}
+\doxysubsubsection{\texorpdfstring{MergeSortMulti()}{MergeSortMulti()}}
+{\footnotesize\ttfamily void Merge\+Sort\+Mult\+::\+Merge\+Sort\+Multi (\begin{DoxyParamCaption}\item[{int}]{th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Divides an array to the 4 parts (because we use 4 threads) and sorts them. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em th} & -\/ thread sequence number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_merge_sort_mult_a5ea54a3fa790e46c67df7cfcc82dfa8a}\label{class_merge_sort_mult_a5ea54a3fa790e46c67df7cfcc82dfa8a}} 
+\index{MergeSortMult@{MergeSortMult}!Sort@{Sort}}
+\index{Sort@{Sort}!MergeSortMult@{MergeSortMult}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Merge\+Sort\+Mult\+::\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts an array. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Hub/\+Programming2.\+2\+\_\+\+Poplavskiy\+\_\+\+Lab3/\+Lab3/\+Lab3/\mbox{\hyperlink{_merge_sort_8h}{Merge\+Sort.\+h}}\end{DoxyCompactItemize}

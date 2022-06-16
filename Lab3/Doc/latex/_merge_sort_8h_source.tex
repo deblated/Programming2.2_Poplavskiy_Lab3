@@ -1,0 +1,250 @@
+\hypertarget{_merge_sort_8h_source}{}\doxysection{Merge\+Sort.\+h}
+\label{_merge_sort_8h_source}\index{C:/GitHub/Programming2.2\_Poplavskiy\_Lab3/Lab3/Lab3/MergeSort.h@{C:/GitHub/Programming2.2\_Poplavskiy\_Lab3/Lab3/Lab3/MergeSort.h}}
+\mbox{\hyperlink{_merge_sort_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_str_8h}{Str.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }MergeSortTestClass;}
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_merge_sort}{MergeSort}} \{}
+\DoxyCodeLine{9     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_merge_sort_a869e6111426f3caffa383288e3b98971}{MergeSortTestClass}};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}{Copy}}(\mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}});}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{Merge}}(\mbox{\hyperlink{class_str}{Str}}* a, \textcolor{keywordtype}{int} low, \textcolor{keywordtype}{int} high, \textcolor{keywordtype}{int} mid);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{SortMerge}}(\mbox{\hyperlink{class_str}{Str}}* a, \textcolor{keywordtype}{int} low, \textcolor{keywordtype}{int} high);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a39dcd33049edce95136f82abc9021c14}{GetArr}}();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a1e6fdd7b2e8cbc0307285fc089fe0634}{GetSize}}();}
+\DoxyCodeLine{22     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_merge_sort_a9339b081ecb39417e938201fe8c644aa}{AreEqual}}(\mbox{\hyperlink{class_str}{Str}}* first, \mbox{\hyperlink{class_str}{Str}}* second);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_merge_sort_a55ae6cf0736f402fc4f0db2d9326a641}{MergeSort}}()}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         this-\/>arr = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{31         this-\/>size = 0;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_merge_sort_a70f94c0eaaf6cf743d37023b4d5e2814}{MergeSort}}(\mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}})}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}{Copy}}(\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}); }
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_merge_sort_a05f9a2c09963e313bddae57561e75efc}{MergeSort}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_merge_sort}{MergeSort}}\& obj) :\mbox{\hyperlink{class_merge_sort}{MergeSort}}(obj.\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, obj.\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}})}
+\DoxyCodeLine{47     \{}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_ab0e63fe487135791ff7befda4071212e}{Set}}(\mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}});}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_a15fbc831b44e945ddfdd7a8251927078}{Print}}();}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_ae8b9c2a99011f4f940f7e79ab5ffd881}{Sort}}();}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{62 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{MergeSort::Merge}}(\mbox{\hyperlink{class_str}{Str}}* a, \textcolor{keywordtype}{int} low, \textcolor{keywordtype}{int} high, \textcolor{keywordtype}{int} mid)}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} i, j, k;}
+\DoxyCodeLine{65     \mbox{\hyperlink{class_str}{Str}}* temp = \textcolor{keyword}{new} \mbox{\hyperlink{class_str}{Str}}[high -\/ low + 1];}
+\DoxyCodeLine{66     i = low;}
+\DoxyCodeLine{67     k = 0;}
+\DoxyCodeLine{68     j = mid + 1;}
+\DoxyCodeLine{69     \textcolor{keywordflow}{while} (i <= mid \&\& j <= high)}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (a[i].GetLength() > a[j].GetLength())}
+\DoxyCodeLine{72         \{}
+\DoxyCodeLine{73             temp[k] = a[i];}
+\DoxyCodeLine{74             k++;}
+\DoxyCodeLine{75             i++;}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a[i].GetLength() == a[j].GetLength())}
+\DoxyCodeLine{78         \{}
+\DoxyCodeLine{79             \textcolor{keywordtype}{int} f = 0;}
+\DoxyCodeLine{80             \textcolor{keywordtype}{int} counter\_for\_equal = 0;}
+\DoxyCodeLine{81             \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{82                 \textcolor{keywordflow}{if} (a[i].GetStr()[f] > a[j].GetStr()[f])}
+\DoxyCodeLine{83                 \{}
+\DoxyCodeLine{84                     temp[k] = a[i];}
+\DoxyCodeLine{85                     k++;}
+\DoxyCodeLine{86                     i++;}
+\DoxyCodeLine{87                     f = a[i].\mbox{\hyperlink{class_str_ac239a7d460dfe5f0dac8b1be46af1236}{GetLength}}();}
+\DoxyCodeLine{88                 \}}
+\DoxyCodeLine{89                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a[i].GetStr()[f] < a[j].GetStr()[f]) \{}
+\DoxyCodeLine{90                     temp[k] = a[j];}
+\DoxyCodeLine{91                     k++;}
+\DoxyCodeLine{92                     j++;}
+\DoxyCodeLine{93                     f = a[i].\mbox{\hyperlink{class_str_ac239a7d460dfe5f0dac8b1be46af1236}{GetLength}}();}
+\DoxyCodeLine{94                 \}}
+\DoxyCodeLine{95                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f == a[i].GetLength() -\/ 1 \&\& a[i].GetStr()[f] == a[j].GetStr()[f])}
+\DoxyCodeLine{96                 \{}
+\DoxyCodeLine{97                     temp[k] = a[i];}
+\DoxyCodeLine{98                     k++;}
+\DoxyCodeLine{99                     i++;}
+\DoxyCodeLine{100                     f = a[i].\mbox{\hyperlink{class_str_ac239a7d460dfe5f0dac8b1be46af1236}{GetLength}}();}
+\DoxyCodeLine{101                 \}}
+\DoxyCodeLine{102                 \textcolor{keywordflow}{else} f++;}
+\DoxyCodeLine{103             \} \textcolor{keywordflow}{while} (f != a[i].GetLength());}
+\DoxyCodeLine{104         \}}
+\DoxyCodeLine{105         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{106         \{}
+\DoxyCodeLine{107             temp[k] = a[j];}
+\DoxyCodeLine{108             k++;}
+\DoxyCodeLine{109             j++;}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keywordflow}{while} (i <= mid)}
+\DoxyCodeLine{114     \{}
+\DoxyCodeLine{115         temp[k] = a[i];}
+\DoxyCodeLine{116         k++;}
+\DoxyCodeLine{117         i++;}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{keywordflow}{while} (j <= high)}
+\DoxyCodeLine{121     \{}
+\DoxyCodeLine{122         temp[k] = a[j];}
+\DoxyCodeLine{123         k++;}
+\DoxyCodeLine{124         j++;}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126     \textcolor{keywordflow}{for} (i = low; i <= high; i++)}
+\DoxyCodeLine{127     \{}
+\DoxyCodeLine{128         a[i] = temp[i -\/ low];}
+\DoxyCodeLine{129     \}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     \textcolor{keyword}{delete}[]temp;}
+\DoxyCodeLine{132 \}}
+\DoxyCodeLine{139 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{MergeSort::SortMerge}}(\mbox{\hyperlink{class_str}{Str}}* a, \textcolor{keywordtype}{int} low, \textcolor{keywordtype}{int} high) \{}
+\DoxyCodeLine{140     \textcolor{keywordtype}{int} mid;}
+\DoxyCodeLine{141     \textcolor{keywordflow}{if} (low < high) \{}
+\DoxyCodeLine{142         mid = (low + high) / 2;}
+\DoxyCodeLine{143         \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{SortMerge}}(a, low, mid);}
+\DoxyCodeLine{144         \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{SortMerge}}(a, mid + 1, high);}
+\DoxyCodeLine{145         \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{Merge}}(a, low, high, mid);}
+\DoxyCodeLine{146     \}}
+\DoxyCodeLine{147 \}}
+\DoxyCodeLine{153 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}{MergeSort::Copy}}(\mbox{\hyperlink{class_str}{Str}}* arr, \textcolor{keywordtype}{int} size) \{}
+\DoxyCodeLine{154     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} <= 0)}
+\DoxyCodeLine{155     \{}
+\DoxyCodeLine{156         this-\/>arr = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{157         this-\/>size = 0;}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160     this-\/>size = \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}};}
+\DoxyCodeLine{161     this-\/>arr = \textcolor{keyword}{new} \mbox{\hyperlink{class_str}{Str}}[\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}];}
+\DoxyCodeLine{162     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}; i++) \{}
+\DoxyCodeLine{163         this-\/>arr[i] = \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}[i];}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165 \}}
+\DoxyCodeLine{171 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_ab0e63fe487135791ff7befda4071212e}{MergeSort::Set}}(\mbox{\hyperlink{class_str}{Str}}* arr, \textcolor{keywordtype}{int} size)}
+\DoxyCodeLine{172 \{}
+\DoxyCodeLine{173     \textcolor{keywordflow}{if} (this-\/>size > 0)}
+\DoxyCodeLine{174     \{}
+\DoxyCodeLine{175         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}};}
+\DoxyCodeLine{176         this-\/>size = 0;}
+\DoxyCodeLine{177     \}}
+\DoxyCodeLine{178     \mbox{\hyperlink{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}{Copy}}(\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}});}
+\DoxyCodeLine{179 \}}
+\DoxyCodeLine{183 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_a15fbc831b44e945ddfdd7a8251927078}{MergeSort::Print}}() \{}
+\DoxyCodeLine{184     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}; i++) \{}
+\DoxyCodeLine{185         std::cout << this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}[i].\mbox{\hyperlink{class_str_a6335f99caa263076b68a332209e7cd99}{GetStr}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{186     \}}
+\DoxyCodeLine{187     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{188 \}}
+\DoxyCodeLine{192 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_ae8b9c2a99011f4f940f7e79ab5ffd881}{MergeSort::Sort}}() \{}
+\DoxyCodeLine{193     \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{SortMerge}}(this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, 0, this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1);}
+\DoxyCodeLine{194 \}}
+\DoxyCodeLine{198 \mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a39dcd33049edce95136f82abc9021c14}{MergeSort::GetArr}}() \{}
+\DoxyCodeLine{199     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}};}
+\DoxyCodeLine{200 \}}
+\DoxyCodeLine{204 \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a1e6fdd7b2e8cbc0307285fc089fe0634}{MergeSort::GetSize}}() \{}
+\DoxyCodeLine{205     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}};}
+\DoxyCodeLine{206 \}}
+\DoxyCodeLine{210 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_merge_sort_8h_a9339b081ecb39417e938201fe8c644aa}{AreEqual}}(\mbox{\hyperlink{class_str}{Str}}*first, \mbox{\hyperlink{class_str}{Str}}* second) \{}
+\DoxyCodeLine{211     \textcolor{keywordtype}{int} sizef = \textcolor{keyword}{sizeof}(first) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_str}{Str}});}
+\DoxyCodeLine{212     \textcolor{keywordtype}{int} sizes = \textcolor{keyword}{sizeof}(second) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_str}{Str}});}
+\DoxyCodeLine{213     \textcolor{keywordflow}{if} (sizef != sizes) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{214     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{215         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < sizef; i++) \{}
+\DoxyCodeLine{216             \textcolor{keywordflow}{if} (first[i].GetStr() != second[i].\mbox{\hyperlink{class_str_a6335f99caa263076b68a332209e7cd99}{GetStr}}()) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{217         \}}
+\DoxyCodeLine{218         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{219     \}}
+\DoxyCodeLine{220 \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{223 \textcolor{keyword}{class }\mbox{\hyperlink{class_merge_sort_mult}{MergeSortMult}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_merge_sort}{MergeSort}} \{}
+\DoxyCodeLine{224 \textcolor{keyword}{private}:}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{MergeSortMulti}}(\textcolor{keywordtype}{int} th);}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228 \textcolor{keyword}{public}: }
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230     \mbox{\hyperlink{class_merge_sort_mult_a9880b5c60f9fe8439fc973ee575e5a85}{MergeSortMult}}() : \mbox{\hyperlink{class_merge_sort}{MergeSort}}::\mbox{\hyperlink{class_merge_sort}{MergeSort}}() \{\};}
+\DoxyCodeLine{231     \mbox{\hyperlink{class_merge_sort_mult_a494c22f4424085a2e1be1d23907161ed}{MergeSortMult}}(\mbox{\hyperlink{class_str}{Str}}* \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}) \{ \mbox{\hyperlink{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}{Copy}}(\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}); \};}
+\DoxyCodeLine{232     \mbox{\hyperlink{class_merge_sort_mult_aa373d74cebe8cb8d275a23c5761f89c0}{MergeSortMult}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_merge_sort_mult}{MergeSortMult}}\& obj) : \mbox{\hyperlink{class_merge_sort_mult}{MergeSortMult}}(obj.\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, obj.\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}) \{\};}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_mult_a5ea54a3fa790e46c67df7cfcc82dfa8a}{Sort}}();}
+\DoxyCodeLine{235 \};}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{241 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{MergeSortMult::MergeSortMulti}}(\textcolor{keywordtype}{int} th) \{}
+\DoxyCodeLine{242     \textcolor{keywordtype}{int} low = 0, high = this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1;}
+\DoxyCodeLine{243     \textcolor{keywordtype}{int} mid = (low + high) / 2;}
+\DoxyCodeLine{244     \textcolor{keywordflow}{switch} (th) \{}
+\DoxyCodeLine{245     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{246         high = mid;}
+\DoxyCodeLine{247         mid = (low + high) / 2;}
+\DoxyCodeLine{248         high = mid;}
+\DoxyCodeLine{249         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{250     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{251         high = mid;}
+\DoxyCodeLine{252         mid = (low + high) / 2;}
+\DoxyCodeLine{253         low = mid + 1;}
+\DoxyCodeLine{254         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{255     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{256         low = mid + 1;}
+\DoxyCodeLine{257         mid = (low + high) / 2;}
+\DoxyCodeLine{258         high = mid;}
+\DoxyCodeLine{259         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{260     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{261         low = mid + 1;}
+\DoxyCodeLine{262         mid = (low + high) / 2;}
+\DoxyCodeLine{263         low = mid + 1;}
+\DoxyCodeLine{264         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{265     \}}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267     \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{MergeSort::SortMerge}}(this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, low, high);}
+\DoxyCodeLine{268     \textcolor{comment}{//if (low < high)}}
+\DoxyCodeLine{269     \textcolor{comment}{//\{}}
+\DoxyCodeLine{270     \textcolor{comment}{//  mid = (low + high) / 2;}}
+\DoxyCodeLine{271     \textcolor{comment}{//  Sort(a, low, mid);}}
+\DoxyCodeLine{272     \textcolor{comment}{//  Sort(a, mid + 1, high);}}
+\DoxyCodeLine{273     \textcolor{comment}{//  Merge(a, low, high, mid);}}
+\DoxyCodeLine{274     \textcolor{comment}{//  low;}}
+\DoxyCodeLine{275     \textcolor{comment}{//\}}}
+\DoxyCodeLine{276 \};}
+\DoxyCodeLine{280 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_merge_sort_mult_a5ea54a3fa790e46c67df7cfcc82dfa8a}{MergeSortMult::Sort}}() \{}
+\DoxyCodeLine{281     std::thread t1([\&]() \{}
+\DoxyCodeLine{282         this-\/>\mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{MergeSortMulti}}(1);}
+\DoxyCodeLine{283         \});}
+\DoxyCodeLine{284     std::thread t2([\&]() \{}
+\DoxyCodeLine{285         this-\/>\mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{MergeSortMulti}}(2);}
+\DoxyCodeLine{286         \});}
+\DoxyCodeLine{287     std::thread t3([\&]() \{}
+\DoxyCodeLine{288         this-\/>\mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{MergeSortMulti}}(3);}
+\DoxyCodeLine{289         \});}
+\DoxyCodeLine{290     std::thread t4([\&]() \{}
+\DoxyCodeLine{291         this-\/>\mbox{\hyperlink{class_merge_sort_mult_a3548d050d383ad93712920ec5c23f5bc}{MergeSortMulti}}(4);}
+\DoxyCodeLine{292         \});}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294     t1.join(), t2.join(), t3.join(), t4.join();}
+\DoxyCodeLine{295     std::thread t5([\&]() \{}
+\DoxyCodeLine{296         \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{MergeSort::Merge}}(this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, 0, ((this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1) / 2), ((this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1) / 2) / 2);}
+\DoxyCodeLine{297         \});}
+\DoxyCodeLine{298     std::thread t6([\&]() \{}
+\DoxyCodeLine{299         \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{MergeSort::Merge}}(this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, (((this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1) / 2) + 1), (this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1), ((((this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1) / 2) + 1) + (this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1)) / 2);}
+\DoxyCodeLine{300         \});}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302     t5.join(), t6.join();}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304     \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{MergeSort::Merge}}(this-\/>\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, 0, this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1, (this-\/>\mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}} -\/ 1) / 2);}
+\DoxyCodeLine{305 \}}
+
+\end{DoxyCode}

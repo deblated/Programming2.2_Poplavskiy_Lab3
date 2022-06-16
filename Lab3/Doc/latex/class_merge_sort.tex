@@ -1,0 +1,271 @@
+\hypertarget{class_merge_sort}{}\doxysection{Merge\+Sort Class Reference}
+\label{class_merge_sort}\index{MergeSort@{MergeSort}}
+
+
+Class for merge sorting.  
+
+
+
+
+{\ttfamily \#include $<$Merge\+Sort.\+h$>$}
+
+Inheritance diagram for Merge\+Sort\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_merge_sort}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_merge_sort_a55ae6cf0736f402fc4f0db2d9326a641}{Merge\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that creates object with empty array of size 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_merge_sort_a70f94c0eaaf6cf743d37023b4d5e2814}{Merge\+Sort}} (\mbox{\hyperlink{class_str}{Str}} $\ast$\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, int \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}})
+\begin{DoxyCompactList}\small\item\em Constructor that creates object with particular array of particular size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_merge_sort_a05f9a2c09963e313bddae57561e75efc}{Merge\+Sort}} (const \mbox{\hyperlink{class_merge_sort}{Merge\+Sort}} \&obj)
+\begin{DoxyCompactList}\small\item\em Copy costructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_ab0e63fe487135791ff7befda4071212e}{Set}} (\mbox{\hyperlink{class_str}{Str}} $\ast$\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, int \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}})
+\begin{DoxyCompactList}\small\item\em Setter for object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_a15fbc831b44e945ddfdd7a8251927078}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints an array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_ae8b9c2a99011f4f940f7e79ab5ffd881}{Sort}} ()
+\begin{DoxyCompactList}\small\item\em Sorts an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}{Copy}} (\mbox{\hyperlink{class_str}{Str}} $\ast$\mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}, int \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}})
+\begin{DoxyCompactList}\small\item\em Copies array to the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}{Merge}} (\mbox{\hyperlink{class_str}{Str}} $\ast$a, int low, int high, int mid)
+\begin{DoxyCompactList}\small\item\em Completes main sorting of strings in descending order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}{Sort\+Merge}} (\mbox{\hyperlink{class_str}{Str}} $\ast$a, int low, int high)
+\begin{DoxyCompactList}\small\item\em Merge sort function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_str}{Str}} $\ast$ \mbox{\hyperlink{class_merge_sort_a39dcd33049edce95136f82abc9021c14}{Get\+Arr}} ()
+\begin{DoxyCompactList}\small\item\em Returns an array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_merge_sort_a1e6fdd7b2e8cbc0307285fc089fe0634}{Get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns a size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_str}{Str}} $\ast$ \mbox{\hyperlink{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}{arr}}
+\begin{DoxyCompactList}\small\item\em Array to sort. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_merge_sort_a4fa726789d196e248d09f2873ac694df}{size}}
+\begin{DoxyCompactList}\small\item\em Size of array to sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_merge_sort_a869e6111426f3caffa383288e3b98971}{Merge\+Sort\+Test\+Class}}
+\item 
+bool \mbox{\hyperlink{class_merge_sort_a9339b081ecb39417e938201fe8c644aa}{Are\+Equal}} (\mbox{\hyperlink{class_str}{Str}} $\ast$first, \mbox{\hyperlink{class_str}{Str}} $\ast$second)
+\begin{DoxyCompactList}\small\item\em Returns boolean value of equality of two arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for merge sorting. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_merge_sort_a55ae6cf0736f402fc4f0db2d9326a641}\label{class_merge_sort_a55ae6cf0736f402fc4f0db2d9326a641}} 
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{MergeSort()}{MergeSort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Merge\+Sort\+::\+Merge\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor that creates object with empty array of size 0. 
+
+\mbox{\Hypertarget{class_merge_sort_a70f94c0eaaf6cf743d37023b4d5e2814}\label{class_merge_sort_a70f94c0eaaf6cf743d37023b4d5e2814}} 
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{MergeSort()}{MergeSort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Merge\+Sort\+::\+Merge\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that creates object with particular array of particular size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arr} & -\/ Array from which we will copy the data to object \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of array in the first param \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_merge_sort_a05f9a2c09963e313bddae57561e75efc}\label{class_merge_sort_a05f9a2c09963e313bddae57561e75efc}} 
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\index{MergeSort@{MergeSort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{MergeSort()}{MergeSort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Merge\+Sort\+::\+Merge\+Sort (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_merge_sort}{Merge\+Sort}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy costructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & -\/ Object from which we will copy the data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}\label{class_merge_sort_a7652c6f9a9ac785cf42ab5d8747c15d0}} 
+\index{MergeSort@{MergeSort}!Copy@{Copy}}
+\index{Copy@{Copy}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily void Merge\+Sort\+::\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Copies array to the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arr} & -\/ Array to copy \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of array to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_merge_sort_a39dcd33049edce95136f82abc9021c14}\label{class_merge_sort_a39dcd33049edce95136f82abc9021c14}} 
+\index{MergeSort@{MergeSort}!GetArr@{GetArr}}
+\index{GetArr@{GetArr}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{GetArr()}{GetArr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_str}{Str}} $\ast$ Merge\+Sort\+::\+Get\+Arr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Returns an array. 
+
+\mbox{\Hypertarget{class_merge_sort_a1e6fdd7b2e8cbc0307285fc089fe0634}\label{class_merge_sort_a1e6fdd7b2e8cbc0307285fc089fe0634}} 
+\index{MergeSort@{MergeSort}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily int Merge\+Sort\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Returns a size. 
+
+\mbox{\Hypertarget{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}\label{class_merge_sort_a5cdb82bc491811c0a93f9a6586258fb6}} 
+\index{MergeSort@{MergeSort}!Merge@{Merge}}
+\index{Merge@{Merge}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily void Merge\+Sort\+::\+Merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{a,  }\item[{int}]{low,  }\item[{int}]{high,  }\item[{int}]{mid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Completes main sorting of strings in descending order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ Array to sort \\
+\hline
+\mbox{\texttt{ in}}  & {\em low} & -\/ Index of begin \\
+\hline
+\mbox{\texttt{ in}}  & {\em high} & -\/ Index of end \\
+\hline
+\mbox{\texttt{ in}}  & {\em mid} & -\/ Index of elem that is between begin and end \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_merge_sort_a15fbc831b44e945ddfdd7a8251927078}\label{class_merge_sort_a15fbc831b44e945ddfdd7a8251927078}} 
+\index{MergeSort@{MergeSort}!Print@{Print}}
+\index{Print@{Print}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Merge\+Sort\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints an array. 
+
+\mbox{\Hypertarget{class_merge_sort_ab0e63fe487135791ff7befda4071212e}\label{class_merge_sort_ab0e63fe487135791ff7befda4071212e}} 
+\index{MergeSort@{MergeSort}!Set@{Set}}
+\index{Set@{Set}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Merge\+Sort\+::\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Setter for object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arr} & -\/ Array to copy \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of array to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_merge_sort_ae8b9c2a99011f4f940f7e79ab5ffd881}\label{class_merge_sort_ae8b9c2a99011f4f940f7e79ab5ffd881}} 
+\index{MergeSort@{MergeSort}!Sort@{Sort}}
+\index{Sort@{Sort}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Merge\+Sort\+::\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts an array. 
+
+\mbox{\Hypertarget{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}\label{class_merge_sort_acf5659f201362cbc28e3065b5d9b5bf5}} 
+\index{MergeSort@{MergeSort}!SortMerge@{SortMerge}}
+\index{SortMerge@{SortMerge}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{SortMerge()}{SortMerge()}}
+{\footnotesize\ttfamily void Merge\+Sort\+::\+Sort\+Merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{a,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Merge sort function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ Array to sort \\
+\hline
+\mbox{\texttt{ in}}  & {\em low} & -\/ Index of begin \\
+\hline
+\mbox{\texttt{ in}}  & {\em high} & -\/ Index of end \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_merge_sort_a9339b081ecb39417e938201fe8c644aa}\label{class_merge_sort_a9339b081ecb39417e938201fe8c644aa}} 
+\index{MergeSort@{MergeSort}!AreEqual@{AreEqual}}
+\index{AreEqual@{AreEqual}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{AreEqual}{AreEqual}}
+{\footnotesize\ttfamily bool Are\+Equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{first,  }\item[{\mbox{\hyperlink{class_str}{Str}} $\ast$}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns boolean value of equality of two arrays. 
+
+\mbox{\Hypertarget{class_merge_sort_a869e6111426f3caffa383288e3b98971}\label{class_merge_sort_a869e6111426f3caffa383288e3b98971}} 
+\index{MergeSort@{MergeSort}!MergeSortTestClass@{MergeSortTestClass}}
+\index{MergeSortTestClass@{MergeSortTestClass}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{MergeSortTestClass}{MergeSortTestClass}}
+{\footnotesize\ttfamily friend class Merge\+Sort\+Test\+Class\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}\label{class_merge_sort_a11a261af704be1b765e73cb72c4f4f18}} 
+\index{MergeSort@{MergeSort}!arr@{arr}}
+\index{arr@{arr}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{arr}{arr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_str}{Str}}$\ast$ Merge\+Sort\+::arr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array to sort. 
+
+\mbox{\Hypertarget{class_merge_sort_a4fa726789d196e248d09f2873ac694df}\label{class_merge_sort_a4fa726789d196e248d09f2873ac694df}} 
+\index{MergeSort@{MergeSort}!size@{size}}
+\index{size@{size}!MergeSort@{MergeSort}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Merge\+Sort\+::size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Size of array to sort. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Hub/\+Programming2.\+2\+\_\+\+Poplavskiy\+\_\+\+Lab3/\+Lab3/\+Lab3/\mbox{\hyperlink{_merge_sort_8h}{Merge\+Sort.\+h}}\end{DoxyCompactItemize}

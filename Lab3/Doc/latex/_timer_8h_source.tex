@@ -1,0 +1,41 @@
+\hypertarget{_timer_8h_source}{}\doxysection{Timer.\+h}
+\label{_timer_8h_source}\index{C:/GitHub/Programming2.2\_Poplavskiy\_Lab3/Lab3/Lab3/Timer.h@{C:/GitHub/Programming2.2\_Poplavskiy\_Lab3/Lab3/Lab3/Timer.h}}
+\mbox{\hyperlink{_timer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_timer}{Timer}} \{}
+\DoxyCodeLine{5 \textcolor{keyword}{public}:}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}() \{}
+\DoxyCodeLine{8         \mbox{\hyperlink{class_timer_ac5e808f1de09bd28a061068af6d8f38a}{start}} = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{9         \mbox{\hyperlink{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}{isStarted}} = 1;}
+\DoxyCodeLine{10     \}; }
+\DoxyCodeLine{11     \mbox{\hyperlink{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{\string~Timer}}() \{}
+\DoxyCodeLine{12         this-\/>\mbox{\hyperlink{class_timer_acc04171f4e86e483d292bfb8e58fdd31}{TimerStop}}();}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_timer_acc04171f4e86e483d292bfb8e58fdd31}{TimerStop}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_timer_ac7a5493694f3bf155d4bfd32b621265d}{GetDuration}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     std::chrono::time\_point<std::chrono::steady\_clock> \mbox{\hyperlink{class_timer_ac5e808f1de09bd28a061068af6d8f38a}{start}}, \mbox{\hyperlink{class_timer_a95daa2e0f5ed581fc836215f96fb8359}{end}};}
+\DoxyCodeLine{20     std::chrono::duration<float> \mbox{\hyperlink{class_timer_a7678557711013e0c02d67bb573752856}{duration}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}{isStarted}} = 0;}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_timer_acc04171f4e86e483d292bfb8e58fdd31}{Timer::TimerStop}}() \{}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}{isStarted}}) \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_timer_a95daa2e0f5ed581fc836215f96fb8359}{end}} = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_timer_a7678557711013e0c02d67bb573752856}{duration}} = \mbox{\hyperlink{class_timer_a95daa2e0f5ed581fc836215f96fb8359}{end}} -\/ \mbox{\hyperlink{class_timer_ac5e808f1de09bd28a061068af6d8f38a}{start}};}
+\DoxyCodeLine{28         std::cout << \textcolor{stringliteral}{"{}Duration: "{}} << \mbox{\hyperlink{class_timer_a7678557711013e0c02d67bb573752856}{duration}}.count() << \textcolor{stringliteral}{"{} seconds\(\backslash\)n"{}};}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}{isStarted}} = 0;}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keywordtype}{float} \mbox{\hyperlink{class_timer_ac7a5493694f3bf155d4bfd32b621265d}{Timer::GetDuration}}() \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_timer_a7678557711013e0c02d67bb573752856}{duration}}.count();}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}

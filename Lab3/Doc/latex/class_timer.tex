@@ -1,0 +1,90 @@
+\hypertarget{class_timer}{}\doxysection{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}} ()
+\item 
+\mbox{\hyperlink{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{$\sim$\+Timer}} ()
+\item 
+void \mbox{\hyperlink{class_timer_acc04171f4e86e483d292bfb8e58fdd31}{Timer\+Stop}} ()
+\item 
+float \mbox{\hyperlink{class_timer_ac7a5493694f3bf155d4bfd32b621265d}{Get\+Duration}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ \mbox{\hyperlink{class_timer_ac5e808f1de09bd28a061068af6d8f38a}{start}}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ \mbox{\hyperlink{class_timer_a95daa2e0f5ed581fc836215f96fb8359}{end}}
+\item 
+std\+::chrono\+::duration$<$ float $>$ \mbox{\hyperlink{class_timer_a7678557711013e0c02d67bb573752856}{duration}}
+\item 
+bool \mbox{\hyperlink{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}{is\+Started}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_timer_a5f16e8da27d2a5a5242dead46de05d97}\label{class_timer_a5f16e8da27d2a5a5242dead46de05d97}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}\label{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}} 
+\index{Timer@{Timer}!````~Timer@{$\sim$Timer}}
+\index{````~Timer@{$\sim$Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Timer()}{~Timer()}}
+{\footnotesize\ttfamily Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timer_ac7a5493694f3bf155d4bfd32b621265d}\label{class_timer_ac7a5493694f3bf155d4bfd32b621265d}} 
+\index{Timer@{Timer}!GetDuration@{GetDuration}}
+\index{GetDuration@{GetDuration}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{GetDuration()}{GetDuration()}}
+{\footnotesize\ttfamily float Timer\+::\+Get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_timer_acc04171f4e86e483d292bfb8e58fdd31}\label{class_timer_acc04171f4e86e483d292bfb8e58fdd31}} 
+\index{Timer@{Timer}!TimerStop@{TimerStop}}
+\index{TimerStop@{TimerStop}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{TimerStop()}{TimerStop()}}
+{\footnotesize\ttfamily void Timer\+::\+Timer\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_timer_a7678557711013e0c02d67bb573752856}\label{class_timer_a7678557711013e0c02d67bb573752856}} 
+\index{Timer@{Timer}!duration@{duration}}
+\index{duration@{duration}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily std\+::chrono\+::duration$<$float$>$ Timer\+::duration\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_timer_a95daa2e0f5ed581fc836215f96fb8359}\label{class_timer_a95daa2e0f5ed581fc836215f96fb8359}} 
+\index{Timer@{Timer}!end@{end}}
+\index{end@{end}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$ Timer\+::end\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}\label{class_timer_a7a4d676717bfe4ee9b13d6c8ea277dcf}} 
+\index{Timer@{Timer}!isStarted@{isStarted}}
+\index{isStarted@{isStarted}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{isStarted}{isStarted}}
+{\footnotesize\ttfamily bool Timer\+::is\+Started = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_timer_ac5e808f1de09bd28a061068af6d8f38a}\label{class_timer_ac5e808f1de09bd28a061068af6d8f38a}} 
+\index{Timer@{Timer}!start@{start}}
+\index{start@{start}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$ Timer\+::start\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Hub/\+Programming2.\+2\+\_\+\+Poplavskiy\+\_\+\+Lab3/\+Lab3/\+Lab3/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\end{DoxyCompactItemize}

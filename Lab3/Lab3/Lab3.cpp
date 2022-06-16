@@ -4,9 +4,19 @@
 
 #include "MergeSort.h"
 #include "Timer.h"
+
 int main(){
 	srand(time(0));
-	unsigned int size = 149741;
+	unsigned int size = 149710;
+	//size 149710
+	//Duration: 20.5391 seconds --> original version
+	//Duration : 14.6916 seconds --> multithreading version
+	//size 14971
+	//Duration: 1.59834 seconds --> original version
+	//Duration : 0.960953 seconds --> multithreading version
+	//size 70893
+	//Duration: 8.5033 seconds --> original version
+	//Duration : 5.98572 seconds --> multithreading version
 	Str* arr1 = new Str[size];
 	ArrGen(arr1, size);
 	Str* arr2 = new Str[size];

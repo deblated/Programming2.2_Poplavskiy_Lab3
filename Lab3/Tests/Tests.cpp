@@ -62,6 +62,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 			Assert::IsTrue(AreEqual(obj222.GetArr(), obj22.GetArr()));
 			Assert::IsTrue(obj222.GetSize() == obj22.GetSize());
 
+			delete[] arr;
 		}
 		TEST_METHOD(TestSetter) 
 		{
@@ -79,6 +80,8 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 			Assert::IsTrue(obj1.GetSize() == size);
 			Assert::IsTrue(AreEqual(obj2.GetArr(), arr));
 			Assert::IsTrue(obj2.GetSize() == size);
+
+			delete[] arr;
 		}
 		TEST_METHOD(TestSorting) 
 		{

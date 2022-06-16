@@ -1,0 +1,63 @@
+\hypertarget{_str_8h_source}{}\doxysection{Str.\+h}
+\label{_str_8h_source}\index{C:/GitHub/Programming2.2\_Poplavskiy\_Lab3/Lab3/Lab3/Str.h@{C:/GitHub/Programming2.2\_Poplavskiy\_Lab3/Lab3/Lab3/Str.h}}
+\mbox{\hyperlink{_str_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_str}{Str}} \{}
+\DoxyCodeLine{5 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     std::string \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}};}
+\DoxyCodeLine{9     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_str_a95b19545f9bf5b5670aab9fb2b68eb96}{length}};}
+\DoxyCodeLine{10     std::string \mbox{\hyperlink{class_str_a037230409ac00548a22bc35ec8c1c8d1}{StrGen}}(\textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_str_a0914b48626701263ccc2a06c6eaeb443}{Str}}(std::string \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}}) : \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}}(\mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}}) \{ this-\/>length = \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}}.length();\};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_str_a51d07a34edbcb6ab60c23c0a1f6d2625}{Str}}() :\mbox{\hyperlink{class_str}{Str}}(\textcolor{stringliteral}{"{}"{}}) \{\};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_str_a1bf18ac295d655971fdc6059c1480114}{SetValue}}(std::string \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}});}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_str_af994a13564ba1eeb16f98466cc511603}{SetValueRand}}();}
+\DoxyCodeLine{23     std::string \mbox{\hyperlink{class_str_a6335f99caa263076b68a332209e7cd99}{GetStr}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_str_ac239a7d460dfe5f0dac8b1be46af1236}{GetLength}}();}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_str}{Str}}\& \mbox{\hyperlink{class_str_a9ca0e4de5ae467237496ca0837af6690}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_str}{Str}}\& other);}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} \mbox{\hyperlink{_str_8h_a0d52b2aa856ac1e55a18b964f07ed26d}{ArrGen}}(\mbox{\hyperlink{class_str}{Str}}* arr, \textcolor{keywordtype}{int} size) \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{35         arr[i].\mbox{\hyperlink{class_str_af994a13564ba1eeb16f98466cc511603}{SetValueRand}}();}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{_str_8h_aa31ee48aa1ed7d089be8bd581f8fd3a2}{CopyArray}}(\mbox{\hyperlink{class_str}{Str}}* CopyFrom, \mbox{\hyperlink{class_str}{Str}}* CopyTo, \textcolor{keywordtype}{int} size) \{}
+\DoxyCodeLine{45     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{46         CopyTo[i] = CopyFrom[i];}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \}}
+\DoxyCodeLine{53 std::string \mbox{\hyperlink{class_str_a037230409ac00548a22bc35ec8c1c8d1}{Str::StrGen}}(\textcolor{keywordtype}{int} size) \{}
+\DoxyCodeLine{54     std::string \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}};}
+\DoxyCodeLine{55     \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}}.reserve(size);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{57     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{58         ch = rand() \% 26 + \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}}.push\_back(ch);}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}};}
+\DoxyCodeLine{62 \}}
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_str_a1bf18ac295d655971fdc6059c1480114}{Str::SetValue}}(std::string str) \{}
+\DoxyCodeLine{68     this-\/>str = \mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}};}
+\DoxyCodeLine{69     this-\/>\mbox{\hyperlink{class_str_a95b19545f9bf5b5670aab9fb2b68eb96}{length}} = str.length();}
+\DoxyCodeLine{70 \}}
+\DoxyCodeLine{74 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_str_af994a13564ba1eeb16f98466cc511603}{Str::SetValueRand}}() \{}
+\DoxyCodeLine{75     this-\/>\mbox{\hyperlink{class_str_a1bf18ac295d655971fdc6059c1480114}{SetValue}}(\mbox{\hyperlink{class_str_a037230409ac00548a22bc35ec8c1c8d1}{StrGen}}(rand() \% 10 + 1));}
+\DoxyCodeLine{76 \}}
+\DoxyCodeLine{80 std::string \mbox{\hyperlink{class_str_a6335f99caa263076b68a332209e7cd99}{Str::GetStr}}() \{}
+\DoxyCodeLine{81     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}};}
+\DoxyCodeLine{82 \}}
+\DoxyCodeLine{86 \textcolor{keywordtype}{int} \mbox{\hyperlink{class_str_ac239a7d460dfe5f0dac8b1be46af1236}{Str::GetLength}}() \{}
+\DoxyCodeLine{87     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_str_a95b19545f9bf5b5670aab9fb2b68eb96}{length}};}
+\DoxyCodeLine{88 \}}
+\DoxyCodeLine{93 \mbox{\hyperlink{class_str}{Str}}\& \mbox{\hyperlink{class_str_a9ca0e4de5ae467237496ca0837af6690}{Str::operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_str}{Str}}\& other) \{}
+\DoxyCodeLine{94     this-\/>\mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}} = other.\mbox{\hyperlink{class_str_ab33e34a0f5911da0acad535ee632330a}{str}};}
+\DoxyCodeLine{95     this-\/>\mbox{\hyperlink{class_str_a95b19545f9bf5b5670aab9fb2b68eb96}{length}} = other.\mbox{\hyperlink{class_str_a95b19545f9bf5b5670aab9fb2b68eb96}{length}};}
+\DoxyCodeLine{96     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{97 \}}
+\DoxyCodeLine{98 }
+
+\end{DoxyCode}

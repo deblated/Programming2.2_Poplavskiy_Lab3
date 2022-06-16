@@ -4,7 +4,7 @@
 #include "Str.h"
 
 class MergeSortTestClass;
-
+///Class for merge sorting
 class MergeSort {
 	friend class MergeSortTestClass;
 
@@ -13,23 +13,36 @@ protected:
 	void Copy(Str* arr, int size);
 	void Merge(Str* a, int low, int high, int mid);
 	void SortMerge(Str* a, int low, int high);
+	///Array to sort
 	Str* arr;
+	///Size of array to sort
 	int size;
 	Str* GetArr();
 	int GetSize();
 	friend bool AreEqual(Str* first, Str* second);
 
 public:
-
+	/*!
+	\brief Default constructor that creates object with empty array of size 0
+	*/
 	MergeSort()
 	{
 		this->arr = nullptr;
 		this->size = 0;
 	}
+	/*!
+	\brief Constructor that creates object with particular array of particular size
+	\param[in] arr - Array from which we will copy the data to object
+	\param[in] size - Size of array in the first param
+	*/
 	MergeSort(Str* arr, int size)
 	{
 		Copy(arr, size); 
 	}
+	/*!
+	\brief Copy costructor
+	\param[in] obj - Object from which we will copy the data
+	*/
 	MergeSort(const MergeSort& obj) :MergeSort(obj.arr, obj.size)
 	{
 	}
@@ -39,6 +52,13 @@ public:
 	void Sort();
 };
 
+/*!
+\brief Completes main sorting of strings in descending order
+\param[in] a - Array to sort
+\param[in] low - Index of begin
+\param[in] high - Index of end
+\param[in] mid - Index of elem that is between begin and end
+*/
 void MergeSort::Merge(Str* a, int low, int high, int mid)
 {
 	int i, j, k;
@@ -110,6 +130,12 @@ void MergeSort::Merge(Str* a, int low, int high, int mid)
 
 	delete[]temp;
 }
+/*!
+\brief Merge sort function
+\param[in] a - Array to sort
+\param[in] low - Index of begin
+\param[in] high - Index of end
+*/
 void MergeSort::SortMerge(Str* a, int low, int high) {
 	int mid;
 	if (low < high) {
@@ -119,6 +145,11 @@ void MergeSort::SortMerge(Str* a, int low, int high) {
 		Merge(a, low, high, mid);
 	}
 }
+/*!
+\brief Copies array to the object
+\param[in] arr - Array to copy
+\param[in] size - Size of array to copy
+*/
 void MergeSort::Copy(Str* arr, int size) {
 	if (size <= 0)
 	{
@@ -132,6 +163,11 @@ void MergeSort::Copy(Str* arr, int size) {
 		this->arr[i] = arr[i];
 	}
 }
+/*!
+\brief Setter for object
+\param[in] arr - Array to copy
+\param[in] size - Size of array to copy
+*/
 void MergeSort::Set(Str* arr, int size)
 {
 	if (this->size > 0)
@@ -141,21 +177,36 @@ void MergeSort::Set(Str* arr, int size)
 	}
 	Copy(arr, size);
 }
+/*!
+\brief Prints an array
+*/
 void MergeSort::Print() {
 	for (int i = 0; i < this->size; i++) {
 		std::cout << this->arr[i].GetStr() << "\n";
 	}
 	std::cout << "\n";
 }
+/*!
+\brief Sorts an array
+*/
 void MergeSort::Sort() {
 	SortMerge(this->arr, 0, this->size - 1);
 }
+/*!
+\brief Returns an array
+*/
 Str* MergeSort::GetArr() {
 	return arr;
 }
+/*!
+\brief Returns a size
+*/
 int MergeSort::GetSize() {
 	return size;
 }
+/*!
+\brief Returns boolean value of equality of two arrays
+*/
 bool AreEqual(Str*first, Str* second) {
 	int sizef = sizeof(first) / sizeof(Str);
 	int sizes = sizeof(second) / sizeof(Str);
@@ -168,10 +219,11 @@ bool AreEqual(Str*first, Str* second) {
 	}
 }
 
+///Class for merge sorting, using multi-threading
 class MergeSortMult : public MergeSort {
 private:
 
-	void MergeSortMulti(Str* a, int size, int th);
+	void MergeSortMulti(int th);
 
 public: 
 
@@ -182,9 +234,12 @@ public:
 	void Sort();
 };
 
-
-void MergeSortMult::MergeSortMulti(Str* a, int size, int th) {
-	int low = 0, high = size - 1;
+/*!
+\brief Divides an array to the 4 parts (because we use 4 threads) and sorts them 
+\param[in] th - thread sequence number
+*/
+void MergeSortMult::MergeSortMulti(int th) {
+	int low = 0, high = this->size - 1;
 	int mid = (low + high) / 2;
 	switch (th) {
 	case 1:
@@ -209,7 +264,7 @@ void MergeSortMult::MergeSortMulti(Str* a, int size, int th) {
 		break;
 	}
 
-	MergeSort::SortMerge(a, low, high);
+	MergeSort::SortMerge(this->arr, low, high);
 	//if (low < high)
 	//{
 	//	mid = (low + high) / 2;
@@ -219,18 +274,21 @@ void MergeSortMult::MergeSortMulti(Str* a, int size, int th) {
 	//	low;
 	//}
 };
+/*!
+\brief Sorts an array
+*/
 void MergeSortMult::Sort() {
 	std::thread t1([&]() {
-		this->MergeSortMulti(this->arr, this->size, 1);
+		this->MergeSortMulti(1);
 		});
 	std::thread t2([&]() {
-		this->MergeSortMulti(this->arr, this->size, 2);
+		this->MergeSortMulti(2);
 		});
 	std::thread t3([&]() {
-		this->MergeSortMulti(this->arr, this->size, 3);
+		this->MergeSortMulti(3);
 		});
 	std::thread t4([&]() {
-		this->MergeSortMulti(this->arr, this->size, 4);
+		this->MergeSortMulti(4);
 		});
 
 	t1.join(), t2.join(), t3.join(), t4.join();
